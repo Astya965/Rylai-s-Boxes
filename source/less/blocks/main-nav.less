@@ -1,13 +1,20 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__list {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  margin-right: 35px;
 
   .list-style;
 }
 
 .main-nav__item {
   margin: 7px auto;
+
+  text-align: center;
 }
 
 .main-nav__link {
@@ -28,4 +35,8 @@
   color: @link--active;
   opacity: 0.4;
   transition: opacity 600ms ease;
+}
+
+.main-nav__toggle {
+  display: none;
 }

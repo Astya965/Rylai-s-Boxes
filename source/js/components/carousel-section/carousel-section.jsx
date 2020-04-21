@@ -3,6 +3,8 @@ import Card from "../card/card.jsx";
 import Slider from "infinite-react-carousel";
 import {extendObject} from "../../utils/util.js";
 
+const MOBILE_WIDTH = 840;
+
 class CarouselSection extends PureComponent {
   constructor(props) {
     super(props);
@@ -22,6 +24,16 @@ class CarouselSection extends PureComponent {
         centerPadding: 0,
         duration: 200,
       }
+    }
+
+    if (document.documentElement.clientWidth <= MOBILE_WIDTH) {
+      this.state = {settings: extendObject(this.state.settings, {
+        arrows: false,
+        autoplayScroll: 2,
+        slidesToShow: 3,
+        autoplaySpeed: 10,
+        duration: 200,
+      })}
     }
 
     this._onButtonClick = this._onButtonClick.bind(this);
