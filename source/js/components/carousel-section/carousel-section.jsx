@@ -31,7 +31,7 @@ class CarouselSection extends PureComponent {
     console.log(1);
     this.sliderRef.slickPlay();
 
-    setTimeout(() => this.sliderRef.slickPause(),  4400);
+    setTimeout(() => this.sliderRef.slickPause(),  5200);
 
   };
 
