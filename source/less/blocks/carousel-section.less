@@ -11,6 +11,7 @@
 }
 
 .carousel-section__inner {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,9 +23,27 @@
   border: 1px solid #bbe2f1;
   border-radius: 11px;
 
-  background-color:  @bg-inner;
+  background-color: @bg-inner;
+}
+
+.carousel-section__inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1000;
+  display: block;
+  width: 2px;
+  height: 100%;
+
+  background-color: @text-main;
 }
 
 .carousel-section__btn {
   margin-top: 20px;
 }
+
+.carousel {
+  width: 90%;
+}
+
