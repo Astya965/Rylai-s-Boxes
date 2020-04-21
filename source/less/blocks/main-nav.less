@@ -1,0 +1,31 @@
+.main-nav__list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  .list-style;
+}
+
+.main-nav__item {
+  margin: 7px auto;
+}
+
+.main-nav__link {
+  padding: 10px 30px;
+
+  color: @text-main;
+  line-height: 1em;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.main-nav__link:hover {
+  color: @link--hover;
+  transition: color 1000ms ease;
+}
+
+.main-nav__link:active {
+  color: @link--active;
+  opacity: 0.4;
+  transition: opacity 600ms ease;
+}
