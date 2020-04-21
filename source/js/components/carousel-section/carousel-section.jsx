@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import Card from "../card/card.jsx";
 import Slider from "infinite-react-carousel";
+import {extendObject} from "../../utils/util.js";
 
 class CarouselSection extends PureComponent {
   constructor(props) {
@@ -10,14 +11,16 @@ class CarouselSection extends PureComponent {
 
     this.state = {
       settings: {
+        swipe: false,
+        pauseOnHover: false,
         autoplay: false,
-        autoplayScroll: 2,
-        autoplaySpeed: 10,
+        autoplayScroll: 3,
+        autoplaySpeed: 100,
         initialSlide: 1,
         slidesToShow: 5,
         arrowsBlock: false,
         centerPadding: 0,
-        duration: 300,
+        duration: 200,
       }
     }
 
@@ -28,7 +31,8 @@ class CarouselSection extends PureComponent {
     console.log(1);
     this.sliderRef.slickPlay();
 
-    setTimeout(() => this.sliderRef.slickPause(), 5500);
+    setTimeout(() => this.sliderRef.slickPause(),  4400);
+
   };
 
   render() {
