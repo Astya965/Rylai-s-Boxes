@@ -1,5 +1,5 @@
 {
-  "homepage": "",
+  "homepage": "https://github.com/Astya965/Rylai-s-Boxes",
   "name": "rylaisboxes",
   "version": "17.0.0",
   "private": true,
@@ -41,8 +41,8 @@
     "eslint": "eslint --ext .jsx --ext .js src/",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "gulpbuild": "gulp gulpbuild",
-    "build": "webpack --mode production",
-    "start": "npm run gulpbuild && gulp start",
+    "build": "npm run gulpbuild && webpack --mode production",
+    "start": "webpack-dev-server --open",
     "deploy": "gh-pages -d public",
     "publish-demo": "npm run build && npm run deploy"
   },
