@@ -1,6 +1,6 @@
 import {mixArray} from "../utils/util.js";
 
-const BOXES_MAX = 5;
+const BOXES_MAX = 6;
 
 /**
  * @description Array of objects.
@@ -39,9 +39,19 @@ const allLootboxes = [
     img: `img/shadow-fiend-arcana.jpg`,
   },
   {
-    id: 1005,
+    id: 1006,
     name: `Аркана Terrorblade`,
     img: `img/terrorblade-arcana.jpg`,
+  },
+  {
+    id: 1007,
+    name: `Аркана Crystal Maiden`,
+    img: `img/crystal-maiden-arcana.jpg`,
+  },
+  {
+    id: 1008,
+    name: `Аркана Lina`,
+    img: `img/lina-arcana.jpg`,
   },
 ];
 
