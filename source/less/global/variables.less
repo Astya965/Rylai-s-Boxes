@@ -1,49 +1,34 @@
-// Навигация
-
-//Размер вьюпорта
-//Ретина
-//Шрифты
-//Основные цвета
-//Цвет фона
-//Цвет границ
-//Цвет текста
-//Цвет ссылок
-// Цвет фона ссылок
-// Цвет фона кнопок
-// Цвет полей формы
-// Тени
-
 //Размер вьюпорта
 @mobile-width: 780px;
 @desktop-width: 1200px;
 
 //Шрифт
-@roboto : "Arial", sans-serif;
+@arial: "Arial", sans-serif;
 
 //Основные цвета
-@dark: #030c17;
-@light: #eceaf7;
-@white: #ffffff;
-@white--opacity: rgba(252, 252, 252, 0.5);
-@blue--light: #009eb5;
+@white: #ece5e5;
+@white-opacity: rgba(255, 255, 255, 0.1);
+@blue: #4a8399;
+@blue-opacity: rgba(74, 131, 153, 0.2);
+@neon: #4deeea;
 
 //Цвет фона
-@bg-gradient: linear-gradient(90deg, #fbf9ec 0%, #fbf9ec 80%, #eceaf7 90%, #fbf9ec 100%);
-@bg-header: @white;
-@bg-img: @dark;
-@bg-date: @white;
+@bg-inner: @white-opacity;
 
 //Цвет текста
-@text-main: @dark;
+@text-main: @white;
 
 //Цвет ссылок
-@link: @dark;
-@link--hover: @blue--light;
+@link--hover: @neon;
+@link--active: @blue;
+@link-card--hover: @blue-opacity;
 
 //Цвет кнопок
-@button-gallery: @white--opacity;
+@btn--hover: rgba(74, 131, 153, 0.5);
+@btn--active: @blue-opacity;
 
 //Цвет границ:
-@border-header: @dark;
-@border-img: @light;
-@border-date: @dark;
+@border-btn: @blue;
+
+//Анимации:
+@background-transition: background-color 800ms ease;
