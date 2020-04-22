@@ -1,8 +1,18 @@
 .header {
   position: fixed;
+  z-index: 100000000;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
   min-height: 18vh;
+}
+
+@media (max-width: @tablet-width) {
+  .header {
+    position: relative;
+    min-height: auto;
+
+    background-color: @bg-nav;
+  }
 }
