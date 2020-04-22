@@ -48,7 +48,6 @@ class CarouselSection extends PureComponent {
     }
 
     this._onButtonClick = this._onButtonClick.bind(this);
-    this._updateCarousel = this._updateCarousel.bind(this)
   };
 
   _onButtonClick() {
