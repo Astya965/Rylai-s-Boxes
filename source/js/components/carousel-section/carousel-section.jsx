@@ -3,7 +3,8 @@ import Card from "../card/card.jsx";
 import Slider from "infinite-react-carousel";
 import {extendObject} from "../../utils/util.js";
 
-const MOBILE_WIDTH = 840;
+const MOBILE_WIDTH = 400;
+const TABLET_WIDTH = 840;
 
 class CarouselSection extends PureComponent {
   constructor(props) {
@@ -23,10 +24,20 @@ class CarouselSection extends PureComponent {
         arrowsBlock: false,
         centerPadding: 0,
         duration: 200,
-      }
+      },
     }
 
     if (document.documentElement.clientWidth <= MOBILE_WIDTH) {
+      this.state = {settings: extendObject(this.state.settings, {
+        arrows: false,
+        autoplayScroll: 1,
+        slidesToShow: 1,
+        autoplaySpeed: 10,
+        duration: 100,
+      })}
+    }
+
+    if (document.documentElement.clientWidth <= TABLET_WIDTH) {
       this.state = {settings: extendObject(this.state.settings, {
         arrows: false,
         autoplayScroll: 2,
@@ -37,6 +48,7 @@ class CarouselSection extends PureComponent {
     }
 
     this._onButtonClick = this._onButtonClick.bind(this);
+    this._updateCarousel = this._updateCarousel.bind(this)
   };
 
   _onButtonClick() {
